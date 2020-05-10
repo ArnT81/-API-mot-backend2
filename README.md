@@ -9,11 +9,11 @@ npm run start (port 3000 default if not selected)
 Endpoints and possible methods and desired answers
     
 /users
-Methods: GET, POST, DELETE
-Response codes: 200(OK), 201(Created), 404(No Content) 
+Methods: GET, POST
+Response codes: 200(OK), 201(Created), 404(Not Found) 
 
 /users/userId
-Methods: GET, PATCH
+Methods: GET, PATCH, DELETE
 Response codes: 200(OK), 201(Created)
 
 /posts

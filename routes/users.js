@@ -1,10 +1,16 @@
 const express = require('express')
 const router = express.Router()
-// const user = require('../models/user')
+const Users = require('../models/user')
 
 //GETTING ALL
 router.get('/', async (req, res) => {
-    res.send('Hello from router')
+    try {
+        const users = await Users.find()
+        res.send(users)
+    }
+    catch (err) {
+        res.status(500).json({message: err.message})
+    }
 })
 
 //GETTING ONE

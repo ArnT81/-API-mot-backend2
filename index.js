@@ -10,6 +10,9 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Dababase'))
 
+const usersRouter = require('./routes/users')
+app.use('/users', usersRouter)
+
 app.get('/', (req, res) => {
     res.send([{
         'Description': 'Available endpoints, methods and responses for this API',

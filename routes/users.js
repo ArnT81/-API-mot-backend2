@@ -14,8 +14,8 @@ router.get('/', async (req, res) => {
 })
 
 //GETTING ONE
-router.get('/:id', getUser, (req, res) => {
-    res.send(req.user.name)
+router.get('/:_id', getUser, (req, res) => {
+    res.json(req.user)
 })
 
 //CREATING ONE
@@ -34,13 +34,31 @@ router.post('/', async (req, res) => {
 })
 
 //UPDATING ONE
-router.patch('/:id', (req, res) => {
-
+router.patch('/:_id', getUser, async (req, res) => {
+    if (req.body.name != null) {
+        req.user.name = req.body.name
+    }
+    if (req.body.email != null) {
+        req.user.email = req.body.email
+    }
+    try {
+        const updateUser = await req.user.save()
+        res.json(updateUser)
+    }
+    catch (err) {
+        res.status(400).json({ message: err.message })
+    }
 })
 
 //DELETE ONE
-router.delete('/:id', (req, res) => {
-
+router.delete('/:_id', getUser, async (req, res) => {
+    try {
+        await req.user.remove()
+        res.json({ message: 'Deleted User' })
+    }
+    catch (err) {
+        res.status(500).json({ message: err.message })
+    }
 })
 
 async function getUser(req, res, next) {

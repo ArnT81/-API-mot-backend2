@@ -1,7 +1,7 @@
 GET http://localhost:3000/users
 ###
 
-GET http://localhost:3000/users/5eb81fc507205d06d8afb873a
+GET http://localhost:3000/users/5eb81fc507205d06d8afb873
 ###
 
 POST http://localhost:3000/users/
@@ -13,4 +13,13 @@ Content-Type: application/json
 }
 ###
 
-DELETE http://localhost:3000/users/5eb81fc507205d06d8afb873
+DELETE http://localhost:3000/users/5eb8ef3f07205d06d8afb874
+###
+
+PATCH http://localhost:3000/users/5eb8fcfa1dc2d021687c2658
+Content-Type: application/json
+
+{
+    "name": "Arne anka",
+    "email": "anders_soderberg@hotmail.com"
+}

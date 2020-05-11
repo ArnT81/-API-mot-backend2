@@ -26,5 +26,5 @@ Response codes: 200(OK), 201(Created)
 
 /posts/postId
 Methods: GET, PATCH, DELETE
-Response codes: 200(OK), 201(Created), 404(Not Found)
+Response codes: 200(OK), 201(Created), 400(Bad request), 404(Not Found)
 ```

@@ -1,5 +1,8 @@
 # API-mot-backend2
-övningsuppgift 2
+exercise 2
+
+Design a markdown document with paths, methods and response-codes and then implement
+it on own backend to meet it´s criteria. 
 
 ## To run server: 
 ```

@@ -35,11 +35,13 @@ router.post('/', async (req, res) => {
 
 //UPDATING ONE
 router.patch('/:_id', getUser, async (req, res) => {
-    if (req.body.name != null) {
+    if (req.body.name) {
         req.user.name = req.body.name
+        console.log('Changing name to', req.body.name)
     }
-    if (req.body.email != null) {
+    if (req.body.email) {
         req.user.email = req.body.email
+        console.log('Changing email to', req.body.email)
     }
     try {
         const updateUser = await req.user.save()

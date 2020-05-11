@@ -33,6 +33,15 @@ app.get('/', (req, res) => {
             'Created': '201',
             'Bad request': '400',
             'Not found': '404'
+        },
+        Useful_syntax: {
+            'cls': 'clear screen',
+            'curl --help': 'gives you all available curl options',
+            '|jq after request': 'structures JSON data',
+            
+        },
+        Examples: {
+            'Create user': `curl POST ''Content-Type: application/json'' http://localhost:3000/users/ {''name'': ''Your name'', ''email'': ''Your email''}`
         }
     }])
 })

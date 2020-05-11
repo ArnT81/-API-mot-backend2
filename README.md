@@ -3,6 +3,7 @@
 
 ## To run server: 
 ```
+npm install (to get dependencies)
 npm run start (port 3000 default if not selected)
 ```
 ---

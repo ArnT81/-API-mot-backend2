@@ -15,6 +15,9 @@ app.use(express.json())
 const usersRouter = require('./routes/users')
 app.use('/users', usersRouter)
 
+const postsRouter = require('./routes/posts')
+app.use('/posts', postsRouter)
+
 app.get('/', (req, res) => {
     res.send([{
         'Description': 'Available endpoints, methods and responses for this API',

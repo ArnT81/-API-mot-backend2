@@ -63,6 +63,7 @@ router.delete('/:_id', getUser, async (req, res) => {
     }
 })
 
+//MIDDLEWARE FOR FINDING USER
 async function getUser(req, res, next) {
     let user
     try {

@@ -1,0 +1,11 @@
+GET http://localhost:3000/posts
+###
+
+POST http://localhost:3000/posts/
+Content-Type: application/json
+
+{
+    "title": "Fan vad skoj det är med backend",
+    "text": "Känner att jag börjar få kläm på det med :)"
+}
+###

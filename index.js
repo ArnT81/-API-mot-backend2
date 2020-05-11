@@ -10,6 +10,8 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Dababase'))
 
+app.use(express.json())
+
 const usersRouter = require('./routes/users')
 app.use('/users', usersRouter)
 
@@ -29,6 +31,7 @@ app.get('/', (req, res) => {
         Response: {
             'OK': '200',
             'Created': '201',
+            'Bad request': '400',
             'Not found': '404'
         }
     }])

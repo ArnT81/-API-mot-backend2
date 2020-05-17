@@ -22,7 +22,10 @@ router.get('/:_id', getUser, (req, res) => {
 router.post('/', async (req, res) => {
     const user = new Users({
         name: req.body.name,
-        email: req.body.email
+        email: req.body.email,
+        city: req.body.city,
+        street: req.body.street,
+        zipcode: req.body.zipcode,
     })
     try {
         const newUser = await user.save()

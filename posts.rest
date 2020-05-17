@@ -1,10 +1,10 @@
-GET http://localhost:3000/posts
+GET http://localhost:4000/posts
 ###
 
-GET http://localhost:3000/posts/5eb92804b5d39ea09c00e59dc
+GET http://localhost:4000/posts/5eb92804b5d39ea09c00e59dc
 ###
 
-POST http://localhost:3000/posts/
+POST http://localhost:4000/posts/
 Content-Type: application/json
 
 {
@@ -13,10 +13,10 @@ Content-Type: application/json
 }
 ###
 
-DELETE http://localhost:3000/posts/5eb92868b5d39e09c00e59dd
+DELETE http://localhost:4000/posts/5eb986f2faa10f0aa4e71de7
 ###
 
-PATCH http://localhost:3000/posts/5eb97d268fb0f32220fde3be
+PATCH http://localhost:4000/posts/5eb97d268fb0f32220fde3be
 Content-Type: application/json
 
 {

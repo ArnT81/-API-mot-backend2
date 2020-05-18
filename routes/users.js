@@ -20,12 +20,15 @@ router.get('/:_id', getUser, (req, res) => {
 
 //CREATING ONE
 router.post('/', async (req, res) => {
+    console.log(req.headers, req.body)
     const user = new Users({
         name: req.body.name,
         email: req.body.email,
-        city: req.body.city,
-        street: req.body.street,
-        zipcode: req.body.zipcode,
+        address: {
+            city: req.body.address.city,
+            street: req.body.address.street,
+            zipcode: req.body.address.zipcode,
+        }
     })
     try {
         const newUser = await user.save()

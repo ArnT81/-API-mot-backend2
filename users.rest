@@ -10,9 +10,11 @@ Content-Type: application/json
 {
     "name": "Nathalie",
     "email": "natha_silvernos@hotmail.com",
-    "city": "Vislanda",
-    "street": "Movägen 8",
-    "zipcode": "34250"
+    "address": {
+        "city": "Vislanda",
+        "street": "Movägen 8",
+        "zipcode": "34250"
+    }
 }
 ###
 

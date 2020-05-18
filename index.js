@@ -41,6 +41,7 @@ app.get('/', (req, res) => {
         },
         Examples: {
             'get users': 'curl http://localhost:4000/users/',
+            'create new user(doesnt´t work)': `curl -X POST -H "Content-Type:application/json"  http://localhost:4000/users -d "{"name":"Anders","email":"anders@mail.com","address":{"city":"Vislanda","street":"Movägen","zipcode":"34250"}}"`,
             'Delete user': 'curl -X DELETE http://localhost:4000/users/id'
         }
     }])

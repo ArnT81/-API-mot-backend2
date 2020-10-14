@@ -1,0 +1,84 @@
+POST http://localhost:4000/users/
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "phone": "1-770-736-8031 x56442",
+    "email": "Sincere@april.biz",
+    "homepage": "hildegard.org",
+    "address": {
+        "city": "Gwenborough",
+        "street": "Kulas Light",
+        "zipcode": "92998-3874"
+    }
+}
+###
+POST http://localhost:4000/users/
+Content-Type: application/json
+
+{
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "phone": "010-692-6593 x09125",
+    "email": "Shanna@melissa.tv",
+    "homepage": "hildegard.org",
+    "address": {
+        "city": "Wisokyburgh",
+        "street": "Victor Plains",
+        "zipcode": "90566-7771"
+    }
+}
+###
+POST http://localhost:4000/users/
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "phone": "1-463-123-4447",
+    "email": "Nathan@yesenia.net",
+    "homepage": "ramiro.info",
+    "address": {
+        "city": "McKenziehaven",
+        "street": "Douglas Extension",
+        "zipcode": "59590-4157"
+    }
+}
+###
+POST http://localhost:4000/users/
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "phone": "493-170-9623 x156",
+    "email": "Julianne.OConner@kory.org",
+    "homepage": "kale.biz",
+    "address": {
+        "city": "South Elvis",
+        "street": "Hoeger Mall",
+        "zipcode": "53919-4257"
+    }
+}
+###
+POST http://localhost:4000/users/
+Content-Type: application/json
+
+{
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "phone": "(254)954-1289",
+    "email": "Julianne.OConner@kory.org",
+    "homepage": "demarco.info",
+    "address": {
+        "city": "Roscoeview",
+        "street": "Skiles Walks",
+        "zipcode": "33263"
+    }
+}

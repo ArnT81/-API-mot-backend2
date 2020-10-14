@@ -22,8 +22,12 @@ router.get('/:_id', getUser, (req, res) => {
 router.post('/', async (req, res) => {
     console.log(req.headers, req.body)
     const user = new Users({
+        id: req.body.id,
         name: req.body.name,
+        username: req.body.username,
+        phone: req.body.phone,
         email: req.body.email,
+        homepage: req.body.homepage,
         address: {
             city: req.body.address.city,
             street: req.body.address.street,

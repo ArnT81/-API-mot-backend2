@@ -8,14 +8,19 @@ POST http://localhost:4000/users/
 Content-Type: application/json
 
 {
-    "name": "Nathalie",
-    "email": "natha_silvernos@hotmail.com",
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "phone": "1-770-736-8031 x56442",
+    "email": "Sincere@april.biz",
+    "homepage": "hildegard.org",
     "address": {
-        "city": "Vislanda",
-        "street": "Movägen 8",
-        "zipcode": "34250"
+        "city": "Gwenborough",
+        "street": "Kulas Light",
+        "zipcode": "92998-3874"
     }
 }
+
 ###
 
 DELETE http://localhost:4000/users/5ebe43d620c05b15bcd51d06

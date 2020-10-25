@@ -13,6 +13,7 @@ db.once('open', () => console.log('Connected to Dababase'))
 
 app.use(cors())
 app.use(express.json())
+app.use('/uploads/products', express.static('uploads/products'))
 
 const usersRouter = require('./routes/users')
 app.use('/users', usersRouter)

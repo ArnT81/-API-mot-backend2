@@ -1,0 +1,25 @@
+GET http://localhost:4000/products
+###
+
+GET http://localhost:4000/products/5f9533769d34751b2bc679f7
+###
+
+POST http://localhost:4000/products/
+Content-Type: application/json
+
+{
+    "title": "Shirt",
+    "text": "This beautiful product is made from the finest cotton",
+    "price": 10
+}
+###
+
+DELETE http://localhost:4000/products/5f9533769d34751b2bc679f7
+###
+
+PATCH http://localhost:4000/products/5f9533769d34751b2bc679f7
+Content-Type: application/json
+
+{
+    "price": 20
+}

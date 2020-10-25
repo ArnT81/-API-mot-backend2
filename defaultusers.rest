@@ -1,4 +1,4 @@
-POST http://localhost:4000/users/
+POST http://arnt.hopto.org:4000/users/
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
     }
 }
 ###
-POST http://localhost:4000/users/
+POST http://arnt.hopto.org:4000/users/
 Content-Type: application/json
 
 {
@@ -32,7 +32,7 @@ Content-Type: application/json
     }
 }
 ###
-POST http://localhost:4000/users/
+POST http://arnt.hopto.org:4000/users/
 Content-Type: application/json
 
 {
@@ -49,7 +49,7 @@ Content-Type: application/json
     }
 }
 ###
-POST http://localhost:4000/users/
+POST http://arnt.hopto.org:4000/users/
 Content-Type: application/json
 
 {
@@ -66,7 +66,7 @@ Content-Type: application/json
     }
 }
 ###
-POST http://localhost:4000/users/
+POST http://arnt.hopto.org:4000/users/
 Content-Type: application/json
 
 {

@@ -13,7 +13,7 @@ Content-Type: application/json
 {
     "title": "Shirt",
     "text": "This beautiful product is made from the finest cotton",
-    "price": 10
+    "price": 10,
 }
 ###
 

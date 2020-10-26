@@ -1,7 +1,22 @@
 GET http://localhost:4000/users
 ###
 
-GET http://localhost:4000/users/5eb8fcfa1dc2d021687c2658
+GET http://localhost:4000/users/5f951cc058d894b801d12fe34
+###
+
+GET http://localhost:4000/users/?name=Lars%20Johansson
+###
+
+GET http://localhost:4000/users/?username=Bret
+###
+
+GET http://localhost:4000/users/?phone=1-463-123-4447
+###
+
+GET http://localhost:4000/users/?email=Sincere@april.biz
+###
+
+GET http://localhost:4000/users/?city=Arboga
 ###
 
 POST http://localhost:4000/users/
@@ -26,7 +41,7 @@ Content-Type: application/json
 DELETE http://localhost:4000/users/5ebe43d620c05b15bcd51d06
 ###
 
-PATCH http://localhost:4000/users/5eb8fcfa1dc2d021687c2658
+PATCH http://localhost:4000/users/5f95b30387ad9222091f61d4
 Content-Type: application/json
 
 {

@@ -2,11 +2,38 @@ const express = require('express')
 const router = express.Router()
 const Users = require('../models/user')
 
-//GETTING ALL
+//GETTING ALL OR BY QUERIES
 router.get('/', async (req, res) => {
+    let search = {}
+
+    // BY NAME
+    if (req.query.name) {
+        search = { name: req.query.name }
+    }
+    // BY USERNAME
+    if (req.query.username) {
+        search = { username: req.query.username }
+    }
+    // BY PHONE-NUMBER
+    if (req.query.phone) {
+        search = { phone: req.query.phone }
+    }
+    // BY EMAIL
+    if (req.query.email) {
+        search = { email: req.query.email }
+    }
+    // BY CITY
+    if (req.query.city) {
+        search = { address: { city: req.query.city } }
+        console.log(search)
+    }
+
     try {
-        const users = await Users.find()
-        res.send(users)
+        const users = await Users.find(search)
+        if (users.length < 1) {
+            return res.status(404).json({ message: 'User not found' })
+        }
+        else return res.status(200).send(users)
     }
     catch (err) {
         res.status(500).json({ message: err.message })
@@ -55,7 +82,7 @@ router.patch('/:_id', getUser, async (req, res) => {
     }
     try {
         const updateUser = await req.user.save()
-        res.json(updateUser)
+        res.status(202).json(updateUser)
     }
     catch (err) {
         res.status(400).json({ message: err.message })
@@ -66,7 +93,7 @@ router.patch('/:_id', getUser, async (req, res) => {
 router.delete('/:_id', getUser, async (req, res) => {
     try {
         await req.user.remove()
-        res.json({ message: 'Deleted User' })
+        res.status(200).json({ message: 'Deleted User' })
     }
     catch (err) {
         res.status(500).json({ message: err.message })

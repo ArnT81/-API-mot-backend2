@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const usersSchema = new mongoose.Schema({
     id: {
         type: Number,
-        required: true
+        required: false
     },
     name: {
         type: String,
@@ -24,6 +24,7 @@ const usersSchema = new mongoose.Schema({
         type: String,
     },
     address: {
+        type: Object,
         city: {
             type: String,
             required: true

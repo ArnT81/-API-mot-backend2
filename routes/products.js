@@ -96,6 +96,7 @@ router.delete('/:_id', getProduct, async (req, res) => {
 //MIDDLEWARE FOR FINDING PRODUCT
 async function getProduct(req, res, next) {
     let product
+    console.log('in middleware', req.params)
     try {
         product = await Product.findById(req.params._id)
         if (product == null) {
